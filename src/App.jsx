@@ -1,11 +1,12 @@
 import { Fragment, useEffect, useState } from "react";
-import supabase from "./supabase";
+// import supabase from "./supabase";
 import "./App.style.css";
 import Header from "./Component/Header";
 import NewFactForm from "./Component/NewFactForm";
 import CategoryFilter from "./Component/CategoryFilter";
 import Loader from "./Component/Loader";
 import FactList from "./Component/FactList";
+import { initialFacts } from "./utils";
 
 const App = () => {
   const [showForm, setShowForm] = useState(false);
@@ -18,20 +19,22 @@ const App = () => {
       async function getFacts() {
         setIsLoading(true);
 
-        let query = supabase.from("facts").select("*");
+        // let query = supabase.from("facts").select("*");
 
-        if (currentCategory !== "all")
-          query = query.eq("category", currentCategory);
+        // if (currentCategory !== "all")
+        //   query = query.eq("category", currentCategory);
 
-        const { data: facts, error } = await query
-          .order("votesInteresting", { ascending: false })
-          .limit(1000);
+        // const { data: facts, error } = await query
+        //   .order("votesInteresting", { ascending: false })
+        //   .limit(1000);
 
-        if (!error) {
-          setFacts(facts);
-        } else {
-          alert("There was a problem getting data");
-        }
+        // if (!error) {
+        //   setFacts(facts);
+        // } else {
+        //   alert("There was a problem getting data");
+        // }
+
+        setFacts(initialFacts);
         setIsLoading(false);
       }
       getFacts();
