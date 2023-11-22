@@ -1,6 +1,6 @@
 # Today I Learned
 
-This is a Full Stack application, basically to create and display facts along with their source of information, their category, and the voting system for each factor.
+This is a Full Stack application, basically to create and display facts along with their source of information, their category, and the voting system for each factor. In conclusion, this application's purpose was to explore the new version of React 18. Thanks 👍🏻 
 
 ## Description
 
@@ -22,9 +22,9 @@ Each fact consists of 3 buttons:
 - 🤯 Mind-blowing
 - ⛔ False
 
-> Note that if your fact's false votes are more than your interesting and mind-blowing facts together your fact will be disputed.
+> Note that if your fact's false votes are more than your interesting and mind-blowing facts together your facts will be disputed.
 
-Also, there is a category section which includes various categories such as:
+Also, there is a category section that includes various categories such as:
 
 - All
 - Science
@@ -36,7 +36,7 @@ Also, there is a category section which includes various categories such as:
 - History
 - News
 
-🔺 The app is connected to `Supabase` and you can retrieve data from the database, update, and also insert new data.
+🔺 The app is connected to `Supabase` and you can retrieve data from the database, update, and insert new data.
 
 🔹 Not to mention that the app is mobile friendly (It is completely responsive on mobile devices)
 
